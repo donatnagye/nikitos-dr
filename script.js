@@ -5,7 +5,7 @@ const ZERO_WIDTH_SPACE = "​";
 const congratulationSpan = document.querySelector('#congratulation');
 
 congratulationSpan.addEventListener("click", () => {
-    congratulationSpan.textContent += `1${ZERO_WIDTH_SPACE}`;
+    congratulationSpan.textContent = `CLICK ON ME TO ROLL A DICE)))`;
 });
 
 
