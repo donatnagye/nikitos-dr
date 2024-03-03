@@ -164,3 +164,18 @@ body {
     top: 65%;
     left: 35%;
 }
+.connect-button {
+    background-color: #E8831D;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+    z-index: 9999; /* Adjust this value as needed */
+}
