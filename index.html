@@ -27,33 +27,34 @@
     </template>
 </body>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const connectMetamaskButton = document.getElementById('connect-metamask');
-    
-    if (typeof window.ethereum !== 'undefined') {
-    connectMetamaskButton.addEventListener('click', function() {
-    window.ethereum
-    .request({ method: 'eth_requestAccounts' })
-    .then(function() {
-    alert('MetaMask connected!');
-    })
-    .catch(function(error) {
-    alert('MetaMask connection error: ' + error.message);
-    });
-    });
-    
-    // Change button color on hover when MetaMask is available
-    connectMetamaskButton.addEventListener('mouseover', function() {
-    connectMetamaskButton.style.backgroundColor = '#D5730D';
-    });
-    connectMetamaskButton.addEventListener('mouseout', function() {
-    connectMetamaskButton.style.backgroundColor = '#E8831D';
-    });
-    } else {
-    connectMetamaskButton.addEventListener('click', function() {
-    alert('MetaMask not detected!');
-    });
-    }
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            const connectMetamaskButton = document.getElementById('connect-metamask');
+
+            if (typeof window.ethereum !== 'undefined') {
+                connectMetamaskButton.addEventListener('click', function() {
+                    window.ethereum
+                        .request({ method: 'eth_requestAccounts' })
+                        .then(function() {
+                            connectMetamaskButton.textContent = 'Connected';
+                            connectMetamaskButton.disabled = true;
+                        })
+                        .catch(function(error) {
+                            alert('MetaMask connection error: ' + error.message);
+                        });
+                });
+
+                // Change button color on hover when MetaMask is available
+                connectMetamaskButton.addEventListener('mouseover', function() {
+                    connectMetamaskButton.style.backgroundColor = '#D5730D';
+                });
+                connectMetamaskButton.addEventListener('mouseout', function() {
+                    connectMetamaskButton.style.backgroundColor = '#E8831D';
+                });
+            } else {
+                connectMetamaskButton.addEventListener('click', function() {
+                    alert('MetaMask not detected!');
+                });
+            }
+        });
     </script>
 </html>
