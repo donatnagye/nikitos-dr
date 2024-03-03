@@ -5,24 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Никитос с др!!</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js"></script>
-    <script src="tonconnect-sdk.min.js"></script> 
+   
+    <script src="@tonconnect/ui/dist/tonconnect-ui.min.js" defer></script> 
 </head>
 
 <body class="d-flex ai-c jc-c">
 
-    <span id="congratulation">Никитос с др!!!!!!!1</span>
-
-    <img src="assets/nyan.png" alt="nyan" class="nyan first">
-    <img src="assets/nyan.png" alt="nyan" class="nyan second">
-    <img src="assets/nyan.png" alt="nyan" class="nyan third">
-    <!-- <template id="nyan">
-    </template> -->
-
-    <template id="balloons">
-        <img src="assets/balloons.png" alt="balloons" class="balloons">
-    </template>
+    
+    
     <div id="connect"></div>
     <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
