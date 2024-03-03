@@ -15,7 +15,7 @@ congratulationSpan.addEventListener("click", () => {
         congratulationSpan.textContent += `)`;
     } 
     if (clickCount === 5) {
-        window.location.href = "https://www.google.com";
+        window.location.href = "https://donatnagye.github.io/spin/";
     }
 });
 
