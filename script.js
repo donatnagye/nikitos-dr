@@ -4,10 +4,20 @@ const ZERO_WIDTH_SPACE = "​";
 /** @type {HTMLSpanElement} */
 const congratulationSpan = document.querySelector('#congratulation');
 
-congratulationSpan.addEventListener("click", () => {
-    congratulationSpan.textContent = `CLICK ON ME TO ROLL A DICE)))`;
-});
+let clickCount = 0;
 
+congratulationSpan.addEventListener("click", () => {
+    clickCount++;
+    if (clickCount === 1) {
+        congratulationSpan.textContent = `CLICK ON ME TO ROLL A DICE)))`;
+    } 
+    if (clickCount >1) {
+        congratulationSpan.textContent += `)`;
+    } 
+    if (clickCount === 5) {
+        window.location.href = "https://www.google.com";
+    }
+});
 
 /** @type {HTMLTemplateElement} */
 const balloonsTemplate = document.querySelector("template#balloons");
